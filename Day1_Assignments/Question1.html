@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 1</title>
+</head>
+<body>
+<!--QUESTION 1: Explore and explain the various methods in console function
+Explain them
+Ex. console.log()
+console.warn()
+etc...
+ -->
+ <script>
+     //console.log() method: Gives output on the developers console.
+     console.log("Hey I am an internal script!");
+
+     //console.warn() method: Gives the warning message to the console.
+     console.warn("This is a warning message.");
+
+     //console.error() method: Gives the error message to the console.
+     console.error("This is an error message.");
+
+     var a={name:"Amrit", age:"20", city:"India"}
+     var b={name:"Kaur", age:"20", city:"India"}
+     var c={name:"Matharu", age:"20", city:"India"}
+     //console.log({a,b,c})
+
+     //console.table() method: Displays the data declared in tabular form.
+     console.table({a,b,c});
+
+     //console.time() and console.timeEnd() method: Keeps track of the time taken by the program for execution.
+     console.time('Time taken');
+     
+     
+     //By using %c we can customise our message, it is used to apply a CSS style to console output
+     console.log('%c This is a Custom message','color:blue;')
+
+      console.timeEnd('Time taken');
+
+     // console.count() method : Logs the number of times that this particular call to count() has been called. 
+     for (let i = 0; i < 5; i++) {
+            console.count();
+        }
+
+      // console.group() method: The console.group() method indicates the start of a message group 
+      console.group('simple');
+      console.warn('warning!');
+      console.error('error here');
+      console.log('This is a group!');
+
+      //console.groupEnd() method: Exits the current inline group in the Web Console
+       console.groupEnd('simple');
+
+       // console.clear() method : Clears the console
+        //console.clear();
+
+       //console.info() method: These are used for the debugger and testing purposes. 
+       console.info(a);
+
+ </script>  
+</body>
+</html>
