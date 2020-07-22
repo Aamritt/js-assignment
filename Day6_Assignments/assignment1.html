@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <script type="text/javascript">
+        var colour = ["#7B68EE", "gold", "#EE82EE", "red"];
+        var currentColorIndex = 0;
+      
+        function changeColor() {
+          document.bgColor = colour[currentColorIndex];
+          currentColorIndex = (currentColorIndex + 1) % colour.length;
+          setTimeout(changeColor, 3000);
+        }
+      
+      </script>
+      
+      <body onload="changeColor()">
+        <h2>Question 1:</h2>
+        Write a program that will iterate over an array of colors and change the background of the page after 5 seconds.
+      </body>
+</html>

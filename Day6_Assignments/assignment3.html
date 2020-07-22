@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <style>
+        .dark{
+            background-color: black;
+            color: white;
+            height: auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="name">
+     
+    </div>
+    <div>
+        Time is:
+    </div>
+    <div id="time">
+
+    </div>
+    <button id="mode" onclick="changeTheme()">Mode</button>
+</body>
+<script>
+    var a= prompt("Please Enter Your Name:");
+    document.getElementById("name").innerText=` Welcome to the Webpage, ${a} `;
+   //Current Time
+    function clock(){
+        let date = new Date();
+        console.log("date....",date);
+       let time= date.toLocaleTimeString();
+        console.log("time...",time);
+        document.getElementById("time").innerText=time;
+    }
+    setInterval(clock,1000);
+
+    //Changing theme to dark mode
+   function changeTheme(){
+       const theme=document.body;
+       theme.classList.toggle('dark');
+    }
+
+</script>
+</html>
