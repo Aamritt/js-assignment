@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            text-align:center;
+            padding-top:5%;
+            
+        }
+        h1,h2{
+            text-align:center;
+            
+        }
+        ul{
+            padding-left:0%;
+            list-style-type:none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+</head>
+<body>
+    <!-- Write a program to make a To-Do List which has the following functions:
+    a. Add
+    b. Remove
+    c. Should store the data in local storage-->
+    <script>
+function addItem(){
+  var ul = document.getElementById("dynamicList");
+  var user = document.getElementById("inputValue");
+  var li = document.createElement("li");
+  li.setAttribute('id',user.value);
+  li.appendChild(document.createTextNode(user.value));
+  ul.appendChild(li);
+  localStorage.setItem('todolist',ul.innerHTML);
+}
+
+function removeItem(){
+  var ul = document.getElementById("dynamicList");
+  var user = document.getElementById("inputValue");
+  var item = document.getElementById(user.value);
+  ul.removeChild(item);
+}
+    </script>
+<h1 style=color:dodgerblue>To-Do List</h1>
+<h2 style=color:rgb(255,0,98)>Here you can add / remove an element</h2>
+
+<input type="text" id="inputValue"/>
+<button style="background-color:rgb(0,0,0); color:white;" onclick="addItem()">Add Item</button>
+<button style="background-color:rgb(0,0,0); color:white;" onclick="removeItem()">Remove Item</button>
+
+<ul id="dynamicList"></ul>
+
+</body>
+</html>
